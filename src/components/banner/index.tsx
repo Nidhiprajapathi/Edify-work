@@ -2,7 +2,10 @@
 
 import React from 'react';
 
+import { useRouter } from 'next/navigation';
+
 const Banner: React.FC = () => {
+  const router = useRouter();
   return (
     <header className="w-full min-h-screen bg-gradient-to-br from-gray-50 to-purple-50 px-6 py-8">
       {/* Navbar */}
@@ -17,7 +20,10 @@ const Banner: React.FC = () => {
           <a href="#" className="hover:text-indigo-600 transition duration-200">About</a>
         </nav>
 
-        <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:opacity-90 transition duration-200">
+        <button
+          onClick={() => router.push('/contact')}
+          className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold shadow-md hover:opacity-90 transition duration-200"
+        >
           Contact Us
         </button>
       </div>
