@@ -213,55 +213,55 @@ export default function ContactAndFaqPage() {
           </button>
         </form>
       </section>
+      <br></br>
+      <section className="bg-[#f9fbff] py-10 pt-5 pl-30">
+                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
-      {/* Footer Section */}
-      <footer className="bg-gray-50 text-gray-700 relative">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left - Logo and Description */}
-          <div>
-            <div className="flex items-center space-x-2 mb-4">
-              {/* Replace with your actual logo */}
+                    {/* Left: Logo and Description */}
+                    <div className="flex flex-col justify-between ">
+                        <span className="text-xl font-bold text-pink-700">Edify Work</span>
+                        <p className="text-sm text-gray-600 max-w-xs">
+                            Edify is a post-production & creative studio based in India. Proudly trusted by some of the internet’s top creators.
+                        </p>
+                    </div>
 
-              <span className="text-2xl font-bold text-red-600">Edify</span>
-            </div>
-            <p className="text-sm text-gray-600">
-              Edify is a Post Production & Graphic Studio based in India. Proudly serving some of the top creators in the world.
-            </p>
-          </div>
+                    {/* Center: Useful Links */}
+                    <div>
+                        <h4 className="text-base font-semibold mb-2">Useful Links</h4>
+                        <ul className="space-y-1 text-sm text-gray-700">
+                            <li><a href="/about" className="hover:underline">About</a></li>
+                            <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
+                            <li><a href="/refund" className="hover:underline">Refund Policy</a></li>
+                            <li><a href="/terms" className="hover:underline">Terms</a></li>
+                        </ul>
+                    </div>
 
-          {/* Middle - Useful Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Useful Links</h3>
-            <ul className="space-y-2 text-sm text-gray-600">
-              <li><a href="#" className="hover:text-pink-600">About</a></li>
-              <li><a href="#" className="hover:text-pink-600">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-pink-600">Refund Policy</a></li>
-              <li><a href="#" className="hover:text-pink-600">Terms</a></li>
-            </ul>
-          </div>
+                    {/* Right: Social Links */}
+                    <div>
+                        <h4 className="text-base font-semibold mb-2">Follow Us</h4>
+                        <div className="flex space-x-4 text-gray-700">
+                            {/* Instagram */}
+                            <a
+                                href="https://www.instagram.com/edifywork__/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Instagram size={20} className="text-pink-600 hover:text-pink-800" />
+                            </a>
 
-          {/* Right - Social Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Follow us</h3>
-            <div className="flex space-x-4">
-              <a href="#" aria-label="Instagram" className="text-gray-600 hover:text-pink-600">
-                <Instagram size={24} />
-              </a>
-              <a href="#" aria-label="LinkedIn" className="text-gray-600 hover:text-pink-600">
-                <Linkedin size={24} />
-              </a>
-            </div>
-          </div>
-        </div>
+                            {/* LinkedIn */}
+                            <a
+                                href="https://www.linkedin.com/company/edifywork/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <Linkedin size={20} className="text-blue-700 hover:text-blue-900" />
+                            </a>
+                        </div>
+                    </div>
 
-        {/* Back to Top Button */}
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="fixed bottom-6 right-6 bg-black text-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:bg-gray-800 transition"
-        >
-          ↑
-        </button>
-      </footer>
+                </div>
+            </section>
     </div>
   );
 }
