@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   Clock, Shuffle, ClipboardList, Users,
   Paintbrush, Leaf, Repeat, DollarSign, BadgePercent,
@@ -120,16 +121,31 @@ export default function ContactAndFaqPage() {
     <div className="min-h-screen bg-white text-gray-900 font-sans">
       {/* Header */}
       <header className="border-b">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
-          <div className="text-2xl font-bold text-red-700">Edify Work</div>
-          <nav className="hidden md:flex space-x-6 text-sm">
-            {['Home', 'About', 'Services', 'Join Us', 'FAQs'].map((item) => (
-              <a key={item} href="#" className="text-gray-700 hover:text-pink-500">{item}</a>
-            ))}
-            <a href="#" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-1 rounded-full">Get in Touch →</a>
-          </nav>
-        </div>
-      </header>
+  <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+    
+    {/* Left: Title */}
+    <div className="text-2xl font-bold text-red-700">Edify Work</div>
+
+    {/* Center: Nav links */}
+    <nav className="absolute left-1/2 transform -translate-x-1/2 flex gap-6 text-xl">
+      <Link href="/" className="text-gray-700 hover:text-pink-500">Home</Link>
+      <Link href="/about" className="text-gray-700 hover:text-pink-500">About</Link>
+      <Link href="/services" className="text-gray-700 hover:text-pink-500">Services</Link>
+      <Link href="/join" className="text-gray-700 hover:text-pink-500">Join Us</Link>
+      <Link href="/faqs" className="text-gray-700 hover:text-pink-500">FAQs</Link>
+    </nav>
+
+    {/* Right: Get in Touch button */}
+    <Link href="/contact" className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-1 rounded-full">
+      Get in Touch →
+    </Link>
+    
+
+  </div>
+</header>
+
+
+
 
       {/* FAQ Section */}
       <section className="max-w-7xl mx-auto px-4 md:px-8 py-12">
@@ -141,11 +157,10 @@ export default function ContactAndFaqPage() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 rounded-full border text-sm transition-all duration-150 ${
-                activeTab === tab.id
+              className={`px-4 py-2 rounded-full border text-sm transition-all duration-150 ${activeTab === tab.id
                   ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white'
                   : 'border-black text-gray-800 hover:bg-gray-100'
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -193,11 +208,10 @@ export default function ContactAndFaqPage() {
                   key={service}
                   type="button"
                   onClick={() => setSelectedService(service)}
-                  className={`px-4 py-2 rounded-full border transition ${
-                    selectedService === service
+                  className={`px-4 py-2 rounded-full border transition ${selectedService === service
                       ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white'
                       : 'border-gray-700 text-gray-800'
-                  }`}
+                    }`}
                 >
                   {service}
                 </button>
@@ -213,55 +227,43 @@ export default function ContactAndFaqPage() {
           </button>
         </form>
       </section>
-      <br></br>
+
+      {/* Footer */}
       <section className="bg-[#f9fbff] py-10 pt-5 pl-30">
-                <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          {/* Left: Logo and Description */}
+          <div className="flex flex-col justify-between ">
+            <span className="text-xl font-bold text-pink-700">Edify Work</span>
+            <p className="text-sm text-gray-600 max-w-xs">
+              Edify is a post-production & creative studio based in India. Proudly trusted by some of the internet’s top creators.
+            </p>
+          </div>
 
-                    {/* Left: Logo and Description */}
-                    <div className="flex flex-col justify-between ">
-                        <span className="text-xl font-bold text-pink-700">Edify Work</span>
-                        <p className="text-sm text-gray-600 max-w-xs">
-                            Edify is a post-production & creative studio based in India. Proudly trusted by some of the internet’s top creators.
-                        </p>
-                    </div>
+          {/* Center: Useful Links */}
+          <div>
+            <h4 className="text-base font-semibold mb-2">Useful Links</h4>
+            <ul className="space-y-1 text-sm text-gray-700">
+              <li><Link href="/about" className="hover:underline">About</Link></li>
+              <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>
+              <li><Link href="/refund" className="hover:underline">Refund Policy</Link></li>
+              <li><Link href="/terms" className="hover:underline">Terms</Link></li>
+            </ul>
+          </div>
 
-                    {/* Center: Useful Links */}
-                    <div>
-                        <h4 className="text-base font-semibold mb-2">Useful Links</h4>
-                        <ul className="space-y-1 text-sm text-gray-700">
-                            <li><a href="/about" className="hover:underline">About</a></li>
-                            <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
-                            <li><a href="/refund" className="hover:underline">Refund Policy</a></li>
-                            <li><a href="/terms" className="hover:underline">Terms</a></li>
-                        </ul>
-                    </div>
-
-                    {/* Right: Social Links */}
-                    <div>
-                        <h4 className="text-base font-semibold mb-2">Follow Us</h4>
-                        <div className="flex space-x-4 text-gray-700">
-                            {/* Instagram */}
-                            <a
-                                href="https://www.instagram.com/edifywork__/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Instagram size={20} className="text-pink-600 hover:text-pink-800" />
-                            </a>
-
-                            {/* LinkedIn */}
-                            <a
-                                href="https://www.linkedin.com/company/edifywork/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <Linkedin size={20} className="text-blue-700 hover:text-blue-900" />
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
+          {/* Right: Social Links */}
+          <div>
+            <h4 className="text-base font-semibold mb-2">Follow Us</h4>
+            <div className="flex space-x-4 text-gray-700">
+              <a href="https://www.instagram.com/edifywork__/" target="_blank" rel="noopener noreferrer">
+                <Instagram size={20} className="text-pink-600 hover:text-pink-800" />
+              </a>
+              <a href="https://www.linkedin.com/company/edifywork/" target="_blank" rel="noopener noreferrer">
+                <Linkedin size={20} className="text-blue-700 hover:text-blue-900" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
