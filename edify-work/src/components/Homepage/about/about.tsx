@@ -128,7 +128,7 @@ const About: React.FC = () => {
                             className="rounded-lg mb-4 object-cover w-full h-60"
                         />
                         <h3 className="text-xl font-bold text-[#0B1F3A]">Raj Prajapat</h3>
-                        <p className="text-sm text-gray-600 mb-2">Founder & CEO</p>
+                        <p className="text-sm text-gray-600 mb-2">Co-founder & Ceo dalo</p>
                         <div className="flex gap-3 mb-3">
                             <a href="https://www.instagram.com/_djraj/" target="_blank" rel="noopener noreferrer">
                                 <Instagram size={20} className="text-pink-600 hover:text-pink-800" />
@@ -149,7 +149,7 @@ const About: React.FC = () => {
                             className="rounded-lg mb-4 object-cover w-full h-60"
                         />
                         <h3 className="text-xl font-bold text-[#0B1F3A]">Vikash Rajpurohit</h3>
-                        <p className="text-sm text-gray-600 mb-2">Co-Founder (& more)</p>
+                        <p className="text-sm text-gray-600 mb-2">Co-founder & Cmo</p>
                         <div className="flex gap-3 mb-3">
                             <a href="https://www.instagram.com/vickky_rajj/" target="_blank" rel="noopener noreferrer">
                                 <Instagram size={20} className="text-pink-600 hover:text-pink-800" />
@@ -184,7 +184,7 @@ const About: React.FC = () => {
                     </div>
                 </div>
             </section>
-            
+
         </>
     );
 };
