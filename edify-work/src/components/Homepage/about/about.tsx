@@ -23,16 +23,8 @@ const About: React.FC = () => {
     return (
         <>
             {/* Header Section */}
-            <header className="w-full bg-pink-600">
-                <div className="w-full bg-gradient-to-r from-pink-700 to-purple-600 text-white text-sm text-center pb-4 pt-1 font-normal">
-                    <a
-                        href="/careers"
-                        className="hover:underline flex justify-center items-center gap-1"
-                    >
-                        We're Hiring! <span>Apply Now</span>
-                        <ArrowRight size={14} />
-                    </a>
-                </div>
+            <header className="w-full bg-white">
+                \
 
                 <div className="w-full bg-white shadow-md mt-[-12px] rounded-t-3xl z-10 relative px-5">
                     <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-4">
