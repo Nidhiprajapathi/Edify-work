@@ -23,6 +23,7 @@ const About: React.FC = () => {
     return (
         <>
             {/* Header Section */}
+<<<<<<< HEAD
              <header className="w-full bg-white shadow-md z-20 sticky top-0">
         <div className="max-w-screen-xl mx-auto flex items-center justify-between px-5 md:px-10 py-4">
           {/* Logo */}
@@ -52,6 +53,47 @@ const About: React.FC = () => {
               </a>
             ))}
           </nav>
+=======
+            <header className="w-full bg-white">
+                \
+
+                <div className="w-full bg-white shadow-md mt-[-12px] rounded-t-3xl z-10 relative px-5">
+                    <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-4">
+                        <div className="flex items-center gap-2">
+                            <span className="text-xl font-bold text-pink-700">Edify Work</span>
+                        </div>
+                        <nav className="flex items-center gap-8">
+                            {[
+                                { href: '/home', label: 'Home' },
+                                { href: '/about', label: 'About' },
+                                { href: '/joinus', label: 'Join Us' },
+                                { href: '/faq', label: 'FAQs' },
+                            ].map(({ href, label }) => (
+                                <a
+                                    key={href}
+                                    href={href}
+                                    className={`${pathname === href
+                                        ? 'font-semibold text-black'
+                                        : 'text-gray-700 hover:text-black'
+                                        }`}
+                                >
+                                    {label}
+                                </a>
+                            ))}
+                            <div className="flex items-center gap-1 text-gray-700 hover:text-black cursor-pointer">
+                                <span>Services</span>
+                                <ChevronDown size={16} />
+                            </div>
+                        </nav>
+
+                        <button className="flex items-center bg-gradient-to-r from-pink-700 to-purple-600 text-white font-medium px-6 py-2 rounded-full transition-colors gap-2">
+                            Get in Touch
+                            <ArrowRight size={18} />
+                        </button>
+                    </div>
+                </div>
+            </header>
+>>>>>>> origin/main
 
           {/* CTA Button */}
           <button className="flex items-center bg-gradient-to-r from-pink-600 to-purple-600 text-white text-sm font-medium px-5 py-2 rounded-full hover:scale-105 transition-transform gap-2">
