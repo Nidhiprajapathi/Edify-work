@@ -23,8 +23,8 @@ const About: React.FC = () => {
     return (
         <>
             {/* Header Section */}
-            <header className="w-full bg-white">
-                \
+            <header className="w-full bg-pink-600">
+                
 
                 <div className="w-full bg-white shadow-md mt-[-12px] rounded-t-3xl z-10 relative px-5">
                     <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-4">
@@ -33,9 +33,9 @@ const About: React.FC = () => {
                         </div>
                         <nav className="flex items-center gap-8">
                             {[
-                                { href: '/home', label: 'Home' },
+                                { href: '/', label: 'Home' },
                                 { href: '/about', label: 'About' },
-                                { href: '/joinus', label: 'Join Us' },
+                                { href: '/join', label: 'Join Us' },
                                 { href: '/faq', label: 'FAQs' },
                             ].map(({ href, label }) => (
                                 <a
@@ -170,18 +170,18 @@ const About: React.FC = () => {
 
             {/* Contact Form */}
             <div className='flex pt-15  mx-auto w-7xl space-x-6 py-20 pl-50 ' >
-                <section className="py-20 p-6 bg-white rounded-xl shadow-md border border-b-4 border-b-pink-600 pt-14 text-gray-900  ">
+                <section className="py-20 p-6 bg-white rounded-xl shadow-md border border-b-4 border-b-pink-600 pt-14  ">
                     <h2 className="text-3xl font-extrabold mb-10 relative">
                         Work with our{' '}
-                        <span className="relative after:absolute after:left-0 after:bottom-1 after:h-2 after:w-full  after:bg-pink-300 after:-z-10">
+                        <span className="relative after:absolute after:left-0 after:bottom-1 after:h-2 after:w-full after:bg-pink-300 after:-z-10">
                             A-team.
                         </span>
                     </h2>
 
                     <form className="space-y-12">
-                        <div className="grid md:grid-cols-3 gap-4 space-y-6 text-gray-900">
+                        <div className="grid md:grid-cols-3 gap-4 space-y-6 ">
                             <div>
-                                <label className="block text-sm text-gray font-medium">Your Name/Company Name *</label>
+                                <label className="block text-sm font-medium">Your Name/Company Name *</label>
                                 <input type="text" placeholder="Enter Your Name" className="w-full border-b focus:outline-none" />
                             </div>
                             <div>
@@ -236,15 +236,14 @@ const About: React.FC = () => {
                     {/* Left: Logo and Description */}
                     <div className="flex flex-col justify-between ">
                         <span className="text-xl font-bold text-pink-700">Edify Work</span>
-                        <p className="text-sm text-gray-700 max-w-xs">
+                        <p className="text-sm text-gray-600 max-w-xs">
                             Edify is a post-production & creative studio based in India. Proudly trusted by some of the internet’s top creators.
-
                         </p>
                     </div>
 
                     {/* Center: Useful Links */}
                     <div>
-                        <h4 className="text-base font-semibold mb-2 text-gray-900">Useful Links</h4>
+                        <h4 className="text-base font-semibold mb-2">Useful Links</h4>
                         <ul className="space-y-1 text-sm text-gray-700">
                             <li><a href="/about" className="hover:underline">About</a></li>
                             <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
@@ -255,7 +254,7 @@ const About: React.FC = () => {
 
                     {/* Right: Social Links */}
                     <div>
-                        <h4 className="text-base font-semibold mb-2 text-gray-900">Follow Us</h4>
+                        <h4 className="text-base font-semibold mb-2">Follow Us</h4>
                         <div className="flex space-x-4 text-gray-700">
                             {/* Instagram */}
                             <a

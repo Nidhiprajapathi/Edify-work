@@ -22,9 +22,9 @@ const JoinPage: React.FC = () => {
             {[
               { href: '/', label: 'Home' },
               { href: '/about', label: 'About' },
-              { href: '/services', label: 'Services' },
+              { href: '/service', label: 'Services' },
               { href: '/portfolio', label: 'Portfolio' },
-              { href: '/testimonial', label: 'Testimonial' },
+              { href: '/joinus', label: 'Join us' },
             ].map(({ href, label }) => (
               <a
                 key={href}
@@ -102,9 +102,9 @@ const JoinPage: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-12">Open Roles</h2>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
           {[
-            { title: 'YouTube Video Editor', type: 'Full-time', location: 'Remote' },
-            { title: 'Thumbnail Designer', type: 'Part-time', location: 'Remote' },
-            { title: 'Content Strategist', type: 'Full-time', location: 'Remote' },
+            { title: 'Video Editing', type: 'Full-time', location: 'Remote' },
+            { title: 'Graphic Designing', type: 'Part-time', location: 'Remote' },
+            { title: 'Podcast Editing', type: 'Full-time', location: 'Remote' },
           ].map((role) => (
             <div
               key={role.title}
