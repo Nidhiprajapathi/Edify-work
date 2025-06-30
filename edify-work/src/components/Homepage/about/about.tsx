@@ -35,7 +35,7 @@ const About: React.FC = () => {
                             {[
                                 { href: '/', label: 'Home' },
                                 { href: '/about', label: 'About' },
-                                { href: '/join', label: 'Join Us' },
+                                { href: '/joinus', label: 'Join Us' },
                                 { href: '/faq', label: 'FAQs' },
                             ].map(({ href, label }) => (
                                 <a
