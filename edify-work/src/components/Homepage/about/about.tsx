@@ -23,40 +23,43 @@ const About: React.FC = () => {
     return (
         <>
             {/* Header Section */}
-            <header className="w-full bg-white shadow-md z-20 sticky top-0">
-                <div className="max-w-screen-xl mx-auto flex items-center justify-between px-5 md:px-10 py-4">
-                    {/* Logo */}
-                    <div className="flex items-center gap-2">
-                        <span className="text-2xl font-bold text-pink-700">Edify Work</span>
-                    </div>
+            <header className="w-full bg-pink-600">
+                
 
-                    {/* Navigation */}
-                    <nav className="hidden md:flex items-center gap-6">
-                        {[
-                            { href: '/', label: 'Home' },
-                            { href: '/about', label: 'About' },
-                            { href: '/service', label: 'Services' },
-                            { href: '/portfolio', label: 'Portfolio' },
-                            { href: '/joinus', label: 'Join us' },
-                        ].map(({ href, label }) => (
-                            <a
-                                key={href}
-                                href={href}
-                                className={`text-sm font-medium transition-colors ${pathname === href
-                                        ? 'text-black font-semibold'
+                <div className="w-full bg-white shadow-md mt-[-12px] rounded-t-3xl z-10 relative px-5">
+                    <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-4">
+                        <div className="flex items-center gap-2">
+                            <span className="text-xl font-bold text-pink-700">Edify Work</span>
+                        </div>
+                        <nav className="flex items-center gap-8">
+                            {[
+                                { href: '/', label: 'Home' },
+                                { href: '/about', label: 'About' },
+                                { href: '/join', label: 'Join Us' },
+                                { href: '/faq', label: 'FAQs' },
+                            ].map(({ href, label }) => (
+                                <a
+                                    key={href}
+                                    href={href}
+                                    className={`${pathname === href
+                                        ? 'font-semibold text-black'
                                         : 'text-gray-700 hover:text-black'
-                                    }`}
-                            >
-                                {label}
-                            </a>
-                        ))}
-                    </nav>
+                                        }`}
+                                >
+                                    {label}
+                                </a>
+                            ))}
+                            <div className="flex items-center gap-1 text-gray-700 hover:text-black cursor-pointer">
+                                <span>Services</span>
+                                <ChevronDown size={16} />
+                            </div>
+                        </nav>
 
-                    {/* CTA Button */}
-                    <button className="flex items-center bg-gradient-to-r from-pink-600 to-purple-600 text-white text-sm font-medium px-5 py-2 rounded-full hover:scale-105 transition-transform gap-2">
-                        Get Quote
-                        <ArrowRight size={16} />
-                    </button>
+                        <button className="flex items-center bg-gradient-to-r from-pink-700 to-purple-600 text-white font-medium px-6 py-2 rounded-full transition-colors gap-2">
+                            Get in Touch
+                            <ArrowRight size={18} />
+                        </button>
+                    </div>
                 </div>
             </header>
 
