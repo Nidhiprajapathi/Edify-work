@@ -23,54 +23,43 @@ const About: React.FC = () => {
     return (
         <>
             {/* Header Section */}
-            <header className="w-full bg-pink-600">
-                <div className="w-full bg-gradient-to-r from-pink-700 to-purple-600 text-white text-sm text-center pb-4 pt-1 font-normal">
-                    <a
-                        href="/careers"
-                        className="hover:underline flex justify-center items-center gap-1"
-                    >
-                        We're Hiring! <span>Apply Now</span>
-                        <ArrowRight size={14} />
-                    </a>
-                </div>
+             <header className="w-full bg-white shadow-md z-20 sticky top-0">
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between px-5 md:px-10 py-4">
+          {/* Logo */}
+          <div className="flex items-center gap-2">
+            <span className="text-2xl font-bold text-pink-700">Edify Work</span>
+          </div>
 
-                <div className="w-full bg-white shadow-md mt-[-12px] rounded-t-3xl z-10 relative px-5">
-                    <div className="max-w-screen-xl mx-auto flex items-center justify-between px-6 py-4">
-                        <div className="flex items-center gap-2">
-                            <span className="text-xl font-bold text-pink-700">Edify Work</span>
-                        </div>
-                        <nav className="flex items-center gap-8">
-                            {[
-                                { href: '/', label: 'Home' },
-                                { href: '/about', label: 'About' },
-                                { href: '/join', label: 'Join Us' },
-                                { href: '/faq', label: 'FAQs' },
-                            ].map(({ href, label }) => (
-                                <a
-                                    key={href}
-                                    href={href}
-                                    className={`${pathname === href
-                                        ? 'font-semibold text-black'
-                                        : 'text-gray-700 hover:text-black'
-                                        }`}
-                                >
-                                    {label}
-                                </a>
-                            ))}
-                            <div className="flex items-center gap-1 text-gray-700 hover:text-black cursor-pointer">
-                                <span>Services</span>
-                                <ChevronDown size={16} />
-                            </div>
-                        </nav>
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center gap-6">
+            {[
+              { href: '/', label: 'Home' },
+              { href: '/about', label: 'About' },
+              { href: '/service', label: 'Services' },
+              { href: '/portfolio', label: 'Portfolio' },
+              { href: '/joinus', label: 'Join us' },
+            ].map(({ href, label }) => (
+              <a
+                key={href}
+                href={href}
+                className={`text-sm font-medium transition-colors ${
+                  pathname === href
+                    ? 'text-black font-semibold'
+                    : 'text-gray-700 hover:text-black'
+                }`}
+              >
+                {label}
+              </a>
+            ))}
+          </nav>
 
-                        <button className="flex items-center bg-gradient-to-r from-pink-700 to-purple-600 text-white font-medium px-6 py-2 rounded-full transition-colors gap-2">
-                            Get in Touch
-                            <ArrowRight size={18} />
-                        </button>
-                    </div>
-                </div>
-            </header>
-
+          {/* CTA Button */}
+          <button className="flex items-center bg-gradient-to-r from-pink-600 to-purple-600 text-white text-sm font-medium px-5 py-2 rounded-full hover:scale-105 transition-transform gap-2">
+            Get Quote
+            <ArrowRight size={16} />
+          </button>
+        </div>
+      </header>
             {/* Intro Section */}
             <section className="flex bg-gray-50 py-60 px-6 md:px-20">
                 <div className="flex flex-col md:flex-row items-start gap-12">
@@ -178,18 +167,18 @@ const About: React.FC = () => {
 
             {/* Contact Form */}
             <div className='flex pt-15  mx-auto w-7xl space-x-6 py-20 pl-50 ' >
-                <section className="py-20 p-6 bg-white rounded-xl shadow-md border border-b-4 border-b-pink-600 pt-14  ">
+                <section className="py-20 p-6 bg-white rounded-xl shadow-md border border-b-4 border-b-pink-600 pt-14 text-gray-900  ">
                     <h2 className="text-3xl font-extrabold mb-10 relative">
                         Work with our{' '}
-                        <span className="relative after:absolute after:left-0 after:bottom-1 after:h-2 after:w-full after:bg-pink-300 after:-z-10">
+                        <span className="relative after:absolute after:left-0 after:bottom-1 after:h-2 after:w-full  after:bg-pink-300 after:-z-10">
                             A-team.
                         </span>
                     </h2>
 
                     <form className="space-y-12">
-                        <div className="grid md:grid-cols-3 gap-4 space-y-6 ">
+                        <div className="grid md:grid-cols-3 gap-4 space-y-6 text-gray-900">
                             <div>
-                                <label className="block text-sm font-medium">Your Name/Company Name *</label>
+                                <label className="block text-sm text-gray font-medium">Your Name/Company Name *</label>
                                 <input type="text" placeholder="Enter Your Name" className="w-full border-b focus:outline-none" />
                             </div>
                             <div>
@@ -244,14 +233,15 @@ const About: React.FC = () => {
                     {/* Left: Logo and Description */}
                     <div className="flex flex-col justify-between ">
                         <span className="text-xl font-bold text-pink-700">Edify Work</span>
-                        <p className="text-sm text-gray-600 max-w-xs">
+                        <p className="text-sm text-gray-700 max-w-xs">
                             Edify is a post-production & creative studio based in India. Proudly trusted by some of the internet’s top creators.
+
                         </p>
                     </div>
 
                     {/* Center: Useful Links */}
                     <div>
-                        <h4 className="text-base font-semibold mb-2">Useful Links</h4>
+                        <h4 className="text-base font-semibold mb-2 text-gray-900">Useful Links</h4>
                         <ul className="space-y-1 text-sm text-gray-700">
                             <li><a href="/about" className="hover:underline">About</a></li>
                             <li><a href="/privacy" className="hover:underline">Privacy Policy</a></li>
@@ -262,7 +252,7 @@ const About: React.FC = () => {
 
                     {/* Right: Social Links */}
                     <div>
-                        <h4 className="text-base font-semibold mb-2">Follow Us</h4>
+                        <h4 className="text-base font-semibold mb-2 text-gray-900">Follow Us</h4>
                         <div className="flex space-x-4 text-gray-700">
                             {/* Instagram */}
                             <a
