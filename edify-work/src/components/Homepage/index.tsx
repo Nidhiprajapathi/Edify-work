@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { ArrowRight, BadgeCheck, TrendingUp, PlayCircle } from 'lucide-react';
 import Customvideo from './Customvideo/video';
 import TypewriterText from './TypewriterText/typewriter';
+import CoreServices from './CoreServices/coreservices';
+import Specialservices from './Specialservices/specialservices';
 
 const Index = () => {
   const [pathname, setPathname] = useState('/');
@@ -38,11 +40,10 @@ const Index = () => {
                 <a
                   key={href}
                   href={href}
-                  className={`${
-                    pathname === href
-                      ? 'font-semibold text-black'
-                      : 'text-gray-700 hover:text-black'
-                  }`}
+                  className={`${pathname === href
+                    ? 'font-semibold text-black'
+                    : 'text-gray-700 hover:text-black'
+                    }`}
                 >
                   {label}
                 </a>
@@ -116,8 +117,13 @@ const Index = () => {
           <Customvideo />
         </div>
       </section>
-      <section>
-      </section>
+      {/* Core services section */}
+      <CoreServices />
+
+
+      {/* Special services section */}
+      <Specialservices />
+
     </div>
   );
 };
