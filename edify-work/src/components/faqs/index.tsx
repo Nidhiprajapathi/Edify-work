@@ -131,7 +131,7 @@ export default function ContactAndFaqPage() {
       <Link href="/" className="text-gray-700 hover:text-pink-500">Home</Link>
       <Link href="/about" className="text-gray-700 hover:text-pink-500">About</Link>
       <Link href="/services" className="text-gray-700 hover:text-pink-500">Services</Link>
-      <Link href="/join" className="text-gray-700 hover:text-pink-500">Join Us</Link>
+      <Link href="/joinus" className="text-gray-700 hover:text-pink-500">Join Us</Link>
       <Link href="/faqs" className="text-gray-700 hover:text-pink-500">FAQs</Link>
     </nav>
 
