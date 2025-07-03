@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, BadgeCheck, TrendingUp, PlayCircle } from 'lucide-react';
 import Customvideo from '../Customvideo/video';
-import TypewriterText from '../TypewriterText/typewriter';
+import TypewriterText from './TypewriterText/typewriter';
 
 const Index = () => {
   const [pathname, setPathname] = useState('/');
