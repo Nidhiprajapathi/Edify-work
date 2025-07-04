@@ -36,7 +36,7 @@ const specialservices = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold mb-4 text-white">
+                <h3 className="text-2xl font-bold mb-4 text-white transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-700 group-hover:to-purple-600">
                   Podcast Production
                 </h3>
 
@@ -91,7 +91,7 @@ const specialservices = () => {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold mb-4 text-white">
+                <h3 className="text-2xl font-bold mb-4 text-white transition-all duration-300 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-700 group-hover:to-purple-600">
                   Script-to-Screen
                 </h3>
 
